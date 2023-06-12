@@ -37,7 +37,7 @@ export const addMovieThunk = movie => dispatch => {
 
 export const deleteMovieThunk = id => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        await axios.delete(`/movies/${id}`)
+        await axios.delete(`https://movies-6u2k.onrender.com/api/v1/movies/${id}`)
         dispatch(deleteMovie(id));
     }, "Movie deleted successfully"))
 }
