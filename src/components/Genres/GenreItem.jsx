@@ -15,9 +15,10 @@ const GenreItem = ({ genre }) => {
     }
 
     return (
-        <li key={genre.id} className="genres-item bg-light">
+        <li key={genre.id} className="genres-item bg-success" >
             {isUpdating ? (
                 <input 
+                
                     value={genreUpdated} 
                     onChange={e => setGenreUpdated(e.target.value)} 
                 />

@@ -13,10 +13,10 @@ const GenresModal = ({ show, handleClose }) => {
 
     return (
         <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
+            <Modal.Header closeButton style={{backgroundColor: "rgba(0, 0, 255)", color:"#fff"}}>
                 <Modal.Title>Handle genres</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body style={{backgroundColor: "rgba(0, 0, 255)", color:"#fff"}}>
                 <InputGroup className="mb-3">
                     <Form.Control
                         placeholder="New genre"
@@ -24,6 +24,7 @@ const GenresModal = ({ show, handleClose }) => {
                         onChange={e => setNewGenre(e.target.value)}
                     />
                     <Button 
+                       
                         variant="outline-success" 
                         onClick={() => dispatch(addGenreThunk(newGenre))} 
                     >
@@ -39,5 +40,6 @@ const GenresModal = ({ show, handleClose }) => {
         </Modal>
     );
 };
+
 
 export default GenresModal;

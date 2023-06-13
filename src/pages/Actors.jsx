@@ -34,10 +34,13 @@ const Actors = () => {
     }
 
     return (
-        <>
-            <Row>
-                <Col md={3} xl={2}>
-                    <h4>Filter by nationality</h4>
+        <section style={{marginTop: "120px"}}>
+
+
+            <article style={styles.container}>
+            <Row >
+                <Col md={3} xl={2} >
+                    <h4 >Filter by nationality</h4>
                     <ul>
                         {nationalities.map(nationality => (
                             <li 
@@ -51,8 +54,8 @@ const Actors = () => {
                     </ul>
                 </Col>
                 <Col>
-                    <div className="d-flex justify-content-between align-items-start mb-3">
-                        <h1>Actors</h1>
+                    <div className="d-flex justify-content-between align-items-start mb-3" >
+                        <h1 style={{ color: "#D89216", fontWeight:"700" }}>Actors</h1>
                         <Button
                             variant="success"
                             onClick={() => setShowActorsForm(true)}
@@ -72,8 +75,20 @@ const Actors = () => {
                 handleClose={closeForm} 
                 actorSelected={actorSelected}
             />
-        </>
+            </article>
+
+
+        </section>
     );
 };
+
+const styles = {
+    container: {
+        color:"#fff"
+    },
+    body:{
+        backgroundColor: "rgba(0, 0, 255, 0.473)",
+    }
+}
 
 export default Actors;
