@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import DirectorCard from '../components/Directors/DirectorCard';
 import DirectorForm from '../components/Directors/DirectorForm';
 import getOneProperty from '../utils/getOneProperty';
+import Carrousel from '../components/carrousel/Carrousel';
 
 const Directors = () => {
 
@@ -34,8 +35,14 @@ const Directors = () => {
     }
 
     return (
-        <>
-            <Row>
+        <section style={{marginTop : '120px'}}>
+
+            <Carrousel />
+
+
+            <article> 
+
+            <Row  style={styles.container}>
                 <Col md={3} xl={2}>
                     <h4>Filter by nationality</h4>
                     <ul>
@@ -51,8 +58,8 @@ const Directors = () => {
                     </ul>
                 </Col>
                 <Col>
-                    <div className="d-flex justify-content-between align-items-start mb-3">
-                        <h1>Directors</h1>
+                    <div  className="d-flex justify-content-between align-items-start mb-3">
+                        <h1 style={styles.title}>Directors</h1>
                         <Button
                             variant="success"
                             onClick={() => setShowDirectorsForm(true)}
@@ -60,7 +67,7 @@ const Directors = () => {
                             Add director
                         </Button>
                     </div>
-                    <Row xs={1} md={2} lg={3} xl={4} className="g-4">
+                    <Row  xs={1} md={2} lg={3} xl={4} className="g-4">
                         {directorsFiltered.map((director) => (
                             <DirectorCard director={director} key={director.id} selectDirector={selectDirector} />
                         ))}
@@ -72,8 +79,22 @@ const Directors = () => {
                 handleClose={closeForm}
                 directorSelected={directorSelected}
             />
-        </>
+            </article>
+
+        </section>
     );
 };
+
+const styles = {
+    container:{
+        paddingTop: "3em",
+        color:"#fff",
+        fontFamily: "'Acme', sans-serif",
+        
+    },
+    title:{
+        color: "#D89216"
+    }
+}
 
 export default Directors;

@@ -19,28 +19,28 @@ export const directorsSlice = createSlice({
 
 export const getDirectorsThunk = () => (dispatch) => {
     dispatch(genericRequestThunk(async () => {
-        const res = await axios.get('https://movies-6u2k.onrender.com/api/v1/directors')
+        const res = await axios.get('/directors')
         dispatch(setDirectors(res.data));
     }));
 }
 
 export const addDirectorThunk = director => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        const res = await axios.post('https://movies-6u2k.onrender.com/api/v1/directors', director);
+        const res = await axios.post('/directors', director);
         dispatch(addDirector(res.data));
     }, "Director added successfully"))
 }
 
 export const deleteDirectorThunk = id => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        await axios.delete(`https://movies-6u2k.onrender.com/api/v1/directors/${id}`)
+        await axios.delete(`/directors/${id}`)
         dispatch(deleteDirector(id));
     }, "Director deleted successfully"))
 }
 
 export const updateDirectorThunk = (id, directorParams) => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        const {data: director} = await axios.put(`https://movies-6u2k.onrender.com/api/v1/directors/${id}`, directorParams)
+        const {data: director} = await axios.put(`/directors/${id}`, directorParams)
         dispatch(updateDirector({id, director}))
     }, "Director updated succesfully"));
 }

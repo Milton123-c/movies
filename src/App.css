@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 *{
     box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/765/246/non_2x/dark-pink-blue-background-with-circles-stars-abstract-illustration-with-colorful-spots-stars-template-for-business-cards-websites-vector.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Acme', sans-serif;
 }
 
 .notification-container {

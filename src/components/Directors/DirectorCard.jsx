@@ -15,10 +15,10 @@ const DirectorCard = ({ director, selectDirector, showOptions=true }) => {
 
     return (
         <Col>
-            <Card style={{height: "100%"}}>
+            <Card style={styles.component}>
                 <Card.Img variant="top" src={image} style={{ height: 300, objectFit: "cover" }} />
                 <Card.Body className="d-flex flex-column">
-                    <Card.Title>{firstName} {lastName}</Card.Title>
+                    <Card.Title style={{ color: "#D89216" }}>{firstName} {lastName}</Card.Title>
                     <div className="flex-fill">
                         <div><b>birthday: </b>{birthday}</div>
                         <div><b>Nationality: </b>{nationality}</div>
@@ -35,4 +35,12 @@ const DirectorCard = ({ director, selectDirector, showOptions=true }) => {
     );
 };
 
+const styles = {
+    component:{
+        height: "100%",
+         backgroundColor: "rgba(0, 0, 255, 0.473)",
+         borderRadius: "0.5em",
+         overflow:"hidden"
+    }
+}
 export default DirectorCard;

@@ -19,28 +19,28 @@ export const actorsSlice = createSlice({
 
 export const getActorsThunk = () => (dispatch) => {
     dispatch(genericRequestThunk(async () => {
-        const res = await axios.get('https://movies-6u2k.onrender.com/api/v1/actors')
+        const res = await axios.get('/actors')
         dispatch(setActors(res.data));
     }));
 }
 
 export const addActorThunk = actor => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        const res = await axios.post('https://movies-6u2k.onrender.com/api/v1/actors', actor);
+        const res = await axios.post('/actors', actor);
         dispatch(addActor(res.data));
     }, "Actor added successfully"))
 }
 
 export const deleteActorThunk = id => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        await axios.delete(`https://movies-6u2k.onrender.com/api/v1/actors/${id}`)
+        await axios.delete(`/actors/${id}`)
         dispatch(deleteActor(id));
     }, "Actor deleted successfully"))
 }
 
 export const updateActorThunk = (id, actorParams) => dispatch => {
     dispatch(genericRequestThunk(async () => {
-        const {data: actor} = await axios.put(`https://movies-6u2k.onrender.com/api/v1/actors/${id}`, actorParams)
+        const {data: actor} = await axios.put(`/actors/${id}`, actorParams)
         dispatch(updateActor({id, actor}))
     }, "Actor updated succesfully"));
 }

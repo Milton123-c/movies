@@ -1,0 +1,26 @@
+.home__container{
+    margin-top: 125px;
+    
+}
+
+.home__carrousel{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.carr{
+    position: relative;
+}
+
+.home__movies{
+    padding-top: 5em;
+    font-family: 'Acme', sans-serif;
+    color: #fff;
+}
+
+.home__movie-brand{
+    color: #D89216;
+    
+}

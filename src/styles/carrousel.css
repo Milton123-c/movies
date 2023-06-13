@@ -1,0 +1,194 @@
+
+
+.carrousel{
+
+    width:100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4em;
+    font-family: 'Acme', sans-serif;
+}
+
+.carrousel__inferior{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    position: absolute;
+    
+    transition: transform 0.5s ease-in-out;
+
+    
+}
+.carrousel__container{
+    width:100%;
+ 
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: #FFF;
+    position: relative;
+}
+
+.carrousel__information{
+    background-color: rgba(0, 0, 255, 0.473);
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    overflow: hidden;
+}
+.carrousel__information h2{
+    text-align: center;
+    font-weight: 800;
+    color: #D89216;
+    font-size: 3em;
+
+}
+.carrousel__body{
+    padding: 1em;
+    width: max-content;
+    color: rgb(218, 213, 213);
+    font-weight: 700;
+    width: 100%;
+}
+::-webkit-scrollbar{
+    width: 0.5em;
+}
+.synopsis{
+    height: 100px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    box-shadow: inset 0px -10px 10px -7px rgba(0, 0, 0, 0.445);
+}
+
+.carrousel__body-item > p:nth-child(1){
+    /* background-color: rgba(128, 128, 128, 0.74); */
+    border-bottom: 1px solid #D89216;
+}
+.carrousel__body-item > p:nth-child(2){
+    padding-left: 1em;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2em;
+    
+}
+
+.carrousel__image{
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-top-right-radius: 0.4em ;
+    border-bottom-right-radius: 0.4em ;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/765/246/non_2x/dark-pink-blue-background-with-circles-stars-abstract-illustration-with-colorful-spots-stars-template-for-business-cards-websites-vector.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+
+.carrousel__image >img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carrousel__next, .carrousel__back{
+    position: absolute;
+    top: 0;
+    width: 4em;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff
+}
+.carrousel__next{
+    right: 0;
+}
+
+.carrousel__back > button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+.carrousel__back > button:hover{
+    background-color: rgba(0, 0, 0, 0.432);
+}
+.carrousel__back > button > i{
+    font-size: 3em;
+    color: #D89216;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-3em);
+}
+.carrousel__back > button:hover i{
+    transform: translateX(0);
+}
+
+.carrousel__next > button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+.carrousel__next > button:hover{
+    background-color: rgba(0, 0, 0, 0.432);
+}
+.carrousel__next > button > i{
+    font-size: 3em;
+    color: #D89216;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(3em);
+}
+.carrousel__next > button:hover i{
+    transform: translateX(0);
+}
+
+.carrousel__nave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    
+}
+
+.carrousel__nave > span{
+    width: 7em;
+    height: 0.5em;
+    background-color: rgba(12, 11, 11, 0.521);
+    border-radius: 7em;
+    transition: background-color 0.2s ease-in-out, height 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.carrousel__nave > span:hover{
+    background-color: rgba(12, 11, 11, 0.671);
+    
+}
+
+.span__active{
+    
+    background-color: rgba(12, 11, 11, 0.795) !important;
+    height: 0.8em !important;
+    transition: background-color 0.2s ease-in-out, height 0.3s ease-in-out !important;
+}

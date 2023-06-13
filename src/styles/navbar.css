@@ -1,0 +1,26 @@
+.navbar{
+    background-image: linear-gradient(to right, #0a033e, #0b0543, #0e0647, #11074c, #140751);
+    
+}
+.navbar__brand{
+    color:#D89216 !important;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-weight: 800;
+    font-family: 'Acme', sans-serif;
+    font-size: 3em;
+}
+
+.navbar__brand > i{
+    font-size: 1.5em;
+}
+
+.navbar__link{
+    color:#fff !important;
+    font-family: 'Acme', sans-serif;
+}
+
+.navbar__link:hover{
+    color:#D89216 !important;
+}
